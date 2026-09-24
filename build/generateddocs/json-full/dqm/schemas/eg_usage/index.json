@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "ogc-incubator",
   "version": "0.1",
-  "dateOfLastChange": "2024-11-18",
+  "dateOfLastChange": "2026-09-21",
   "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
   "sources": [
     {
@@ -29,20 +29,25 @@
     "Records",
     "STAC"
   ],
-  "shaclRules": {},
+  "shaclShapes": {
+    "ogc.geo.features.feature": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+    ]
+  },
   "dependsOn": [
     "ogc.dqm.schemas.extraneous_nodes",
     "ogc.geo.features.feature"
   ],
   "schema": {
-    "application/yaml": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.yaml",
-    "application/json": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.json"
+    "application/yaml": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.yaml",
+    "application/json": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.json"
   },
-  "sourceSchema": "https://ogcincubator.github.io/dqm-schemas/_sources/eg_usage/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld",
-  "sourceFiles": "https://ogcincubator.github.io/dqm-schemas/_sources/eg_usage/",
+  "sourceSchema": "https://ogcsandpit.github.io/dqm-schemas/_sources/eg_usage/schema.yaml",
+  "ldContext": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/resolvedProperties.json",
+  "sourceFiles": "https://ogcsandpit.github.io/dqm-schemas/_sources/eg_usage/",
   "validationPassed": true,
-  "testOutputs": "https://github.com/ogcincubator/dqm-schemas/blob/master/build/tests/dqm/schemas/eg_usage/",
+  "testOutputs": "https://github.com/ogcsandpit/dqm-schemas/blob/master/build/tests/dqm/schemas/eg_usage/",
   "description": "## Feature with a DQM property\n\nNB Records and STAC items are features and can be profiled with this model.\n\n",
   "examples": [
     {
@@ -51,25 +56,28 @@
       "snippets": [
         {
           "language": "json",
-          "ref": "feature.json",
+          "ref": "https://ogcsandpit.github.io/dqm-schemas/_sources/eg_usage/feature.json",
           "base-uri": "https://example.com/dqm/example1/",
-          "code": "{\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862874\n      ]\n    ]\n  },\n  \"properties\": {\n    \"extraneous_nodes\": 3\n  }\n}\n",
-          "url": "https://ogcincubator.github.io/dqm-schemas/build/tests/dqm/schemas/eg_usage/example_1_1.json"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/build/tests/dqm/schemas/eg_usage/example_1_1.json",
+          "sizeBytes": 294,
+          "code": "{\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862874\n      ]\n    ]\n  },\n  \"properties\": {\n    \"extraneous_nodes\": 3\n  }\n}\n"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld\",\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862875\n      ]\n    ]\n  },\n  \"properties\": {\n    \"extraneous_nodes\": 3\n  }\n}",
-          "url": "https://ogcincubator.github.io/dqm-schemas/build/tests/dqm/schemas/eg_usage/example_1_1.jsonld"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/build/tests/dqm/schemas/eg_usage/example_1_1.jsonld",
+          "sizeBytes": 403,
+          "code": "{\n  \"@context\": \"https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld\",\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862875\n      ]\n    ]\n  },\n  \"properties\": {\n    \"extraneous_nodes\": 3\n  }\n}"
         },
         {
           "language": "ttl",
-          "code": "@prefix dqm: <http://www.opengis.net/def/metamodel/isodqm/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.com/dqm/example1/f1> a geojson:Feature ;\n    dqm:21 3 ;\n    geojson:geometry [ a geojson:LineString ;\n            geojson:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.1171e+02 4.015671e+01 ) ) ] .\n\n",
-          "url": "https://ogcincubator.github.io/dqm-schemas/build/tests/dqm/schemas/eg_usage/example_1_1.ttl"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/build/tests/dqm/schemas/eg_usage/example_1_1.ttl",
+          "sizeBytes": 448,
+          "code": "@prefix dqm: <http://www.opengis.net/def/metamodel/isodqm/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.com/dqm/example1/f1> a geojson:Feature ;\n    dqm:21 3 ;\n    geojson:geometry [ a geojson:LineString ;\n            geojson:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.1171e+02 4.015671e+01 ) ) ] .\n\n"
         }
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Example of a sinmple GeoJSON Feature specialisation with a DQM measure\n$defs:\n  MyFeature:\n    allOf:\n    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\n    - properties:\n        properties:\n          allOf:\n          - $ref: https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml\n          - required:\n            - extraneous_nodes\n$ref: '#/$defs/MyFeature'\n",
-  "gitRepository": "https://github.com/ogcincubator/dqm-schemas",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Example of a sinmple GeoJSON Feature specialisation with a DQM measure\n$defs:\n  MyFeature:\n    allOf:\n    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\n    - properties:\n        properties:\n          allOf:\n          - $ref: https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml\n          - required:\n            - extraneous_nodes\n$ref: '#/$defs/MyFeature'\n",
+  "gitRepository": "https://github.com/ogcsandpit/dqm-schemas",
   "gitPath": "_sources/eg_usage"
 }

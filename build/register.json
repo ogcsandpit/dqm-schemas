@@ -1,20 +1,22 @@
 {
+  "metaRegistry": "https://w3id.org/ogc/bblocks/meta-register.json",
   "name": "Data Quality Measures Schemas",
   "abstract": "Implementation models (JSON/YAML schemas, but potentially XML and RDF)\n",
   "description": "Data Quality Measures may require complex (non-scalar) value objects, in which case canonical schemas for these values are required to achieve interoperability.\n",
-  "modified": "2024-11-18T05:57:57.996646",
+  "modified": "2026-09-24T22:52:28.739912",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"39d32ff771f87d20ecb44bfa3d868d5942b51074",
-      "shortCommitId": "\"39d32f",
-      "date": "2024-11-14T12:03:04+00:00\""
+      "commitId": "\"6411aed037da38c6d9079d9350eca33d004a4d0c",
+      "shortCommitId": "\"6411ae",
+      "date": "2026-09-23T12:30:49+00:00\""
     }
   },
-  "gitRepository": "https://github.com/ogcincubator/dqm-schemas",
-  "gitHubRepository": "https://github.com/ogcincubator/dqm-schemas/blob/master/",
-  "baseURL": "https://ogcincubator.github.io/dqm-schemas/",
-  "viewerURL": "https://ogcincubator.github.io/dqm-schemas/",
-  "validationReport": "https://ogcincubator.github.io/dqm-schemas/build/tests/report.html",
+  "gitRepository": "https://github.com/ogcsandpit/dqm-schemas",
+  "gitHubRepository": "https://github.com/ogcsandpit/dqm-schemas/blob/master/",
+  "baseURL": "https://ogcsandpit.github.io/dqm-schemas/",
+  "viewerURL": "https://ogcsandpit.github.io/dqm-schemas/",
+  "validationReport": "https://ogcsandpit.github.io/dqm-schemas/build/tests/report.html",
+  "validationReportJson": "https://ogcsandpit.github.io/dqm-schemas/build/tests/report.json",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json"
   ],
@@ -29,7 +31,7 @@
       "itemClass": "schema",
       "register": "dqm-schema-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-11-18",
+      "dateOfLastChange": "2026-09-21",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -42,29 +44,30 @@
       "tags": [
         "templates"
       ],
-      "shaclRules": {},
-      "ldContext": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/context.jsonld",
+      "shaclShapes": {},
+      "ldContext": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/context.jsonld",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.json"
+        "application/yaml": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml",
+        "application/json": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/dqm-schemas/_sources/extraneous_nodes/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/dqm-schemas/_sources/extraneous_nodes/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/dqm-schemas/_sources/extraneous_nodes/",
+      "sourceSchema": "https://ogcsandpit.github.io/dqm-schemas/_sources/extraneous_nodes/schema.yaml",
+      "sourceLdContext": "https://ogcsandpit.github.io/dqm-schemas/_sources/extraneous_nodes/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/resolvedProperties.json",
+      "sourceFiles": "https://ogcsandpit.github.io/dqm-schemas/_sources/extraneous_nodes/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/dqm-schemas/blob/master/build/tests/dqm/schemas/extraneous_nodes/",
+      "testOutputs": "https://github.com/ogcsandpit/dqm-schemas/blob/master/build/tests/dqm/schemas/extraneous_nodes/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/extraneous_nodes/index.md"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/extraneous_nodes/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/extraneous_nodes/index.json"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/extraneous_nodes/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/dqm-schemas/bblock/ogc.dqm.schemas.extraneous_nodes"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/bblock/ogc.dqm.schemas.extraneous_nodes"
         }
       }
     },
@@ -78,7 +81,7 @@
       "itemClass": "schema",
       "register": "dqm-schema-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-11-18",
+      "dateOfLastChange": "2026-09-21",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -91,32 +94,33 @@
       "tags": [
         "templates"
       ],
-      "shaclRules": {},
+      "shaclShapes": {},
       "dependsOn": [
-        "ogc.ogc-utils.iri-or-curie"
+        "bblocks://ogc.ogc-utils.iri-or-curie"
       ],
-      "ldContext": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld",
+      "ldContext": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.json"
+        "application/yaml": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.yaml",
+        "application/json": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/dqm-schemas/_sources/measure/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/dqm-schemas/_sources/measure/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/dqm-schemas/_sources/measure/",
+      "sourceSchema": "https://ogcsandpit.github.io/dqm-schemas/_sources/measure/schema.yaml",
+      "sourceLdContext": "https://ogcsandpit.github.io/dqm-schemas/_sources/measure/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/resolvedProperties.json",
+      "sourceFiles": "https://ogcsandpit.github.io/dqm-schemas/_sources/measure/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/dqm-schemas/blob/master/build/tests/dqm/schemas/measure/",
+      "testOutputs": "https://github.com/ogcsandpit/dqm-schemas/blob/master/build/tests/dqm/schemas/measure/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/measure/index.md"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/measure/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/measure/index.json"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/measure/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/dqm-schemas/bblock/ogc.dqm.schemas.measure"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/bblock/ogc.dqm.schemas.measure"
         }
       }
     },
@@ -130,7 +134,7 @@
       "itemClass": "schema",
       "register": "ogc-incubator",
       "version": "0.1",
-      "dateOfLastChange": "2024-11-18",
+      "dateOfLastChange": "2026-09-21",
       "link": "https://github.com/opengeospatial/geodcat-ogcapi-records",
       "sources": [
         {
@@ -149,34 +153,60 @@
         "Records",
         "STAC"
       ],
-      "shaclRules": {},
+      "shaclShapes": {
+        "ogc.geo.features.feature": [
+          "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+        ]
+      },
       "dependsOn": [
-        "ogc.dqm.schemas.extraneous_nodes",
-        "ogc.geo.features.feature"
+        "bblocks://ogc.dqm.schemas.extraneous_nodes",
+        "bblocks://ogc.geo.features.feature"
       ],
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.json"
+        "application/yaml": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.yaml",
+        "application/json": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/dqm-schemas/_sources/eg_usage/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/dqm-schemas/_sources/eg_usage/",
+      "sourceSchema": "https://ogcsandpit.github.io/dqm-schemas/_sources/eg_usage/schema.yaml",
+      "ldContext": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/resolvedProperties.json",
+      "sourceFiles": "https://ogcsandpit.github.io/dqm-schemas/_sources/eg_usage/",
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/dqm-schemas/blob/master/build/tests/dqm/schemas/eg_usage/",
+      "testOutputs": "https://github.com/ogcsandpit/dqm-schemas/blob/master/build/tests/dqm/schemas/eg_usage/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/eg_usage/index.md"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/eg_usage/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/eg_usage/index.json"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/eg_usage/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/dqm-schemas/bblock/ogc.dqm.schemas.eg_usage"
+          "url": "https://ogcsandpit.github.io/dqm-schemas/bblock/ogc.dqm.schemas.eg_usage"
         }
       }
+    }
+  ],
+  "remoteCacheDir": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://ogcsandpit.github.io/dqm-schemas/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcsandpit.github.io/dqm-schemas/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcsandpit.github.io/dqm-schemas/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
     }
   ]
 }

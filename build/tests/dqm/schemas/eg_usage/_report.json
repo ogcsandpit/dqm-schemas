@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.dqm.schemas.eg_usage - Example Feature with DQM",
   "bblockName": "Example Feature with DQM",
   "bblockId": "ogc.dqm.schemas.eg_usage",
-  "generated": "2024-11-18T05:57:59.392490+00:00",
+  "generated": "2026-09-24T22:52:30.438108+00:00",
   "result": true,
   "items": [
     {
@@ -10,10 +10,10 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/dqm/schemas/eg_usage/example_1_1.json",
-        "url": "https://ogcincubator.github.io/dqm-schemas/build/tests/dqm/schemas/eg_usage/example_1_1.json",
+        "url": "https://ogcsandpit.github.io/dqm-schemas/build/tests/dqm/schemas/eg_usage/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": true,
       "sections": [
@@ -23,7 +23,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.json from examples"
+              "message": "Using feature.json from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -55,6 +55,43 @@
               "result": true,
               "isError": false,
               "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+              "focusNodes": {
+                "geojson:GeometryShape": {
+                  "nodes": []
+                },
+                "geojson:FeatureShape": {
+                  "nodes": [
+                    "<https://example.com/dqm/example1/f1>"
+                  ]
+                },
+                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "geojson:LinkShape": {
+                  "nodes": []
+                },
+                "geojson:GeometryShape/sh:or/rdf:first": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:FeatureShape: <https://example.com/dqm/example1/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
             }
           ]
         }

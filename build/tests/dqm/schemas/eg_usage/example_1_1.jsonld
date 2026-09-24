@@ -1,5 +1,5 @@
 {
-  "@context": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld",
+  "@context": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld",
   "id": "f1",
   "type": "Feature",
   "geometry": {

@@ -12,7 +12,7 @@
             "properties": {
               "allOf": [
                 {
-                  "$ref": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.json"
+                  "$ref": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.json"
                 },
                 {
                   "required": [

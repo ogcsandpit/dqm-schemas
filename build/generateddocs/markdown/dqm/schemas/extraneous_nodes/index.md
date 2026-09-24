@@ -30,7 +30,7 @@ The content of this example.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/context.jsonld",
+  "@context": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/context.jsonld",
   "extraneous_nodes": 2
 }
 ```
@@ -64,8 +64,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml)
+* YAML version: [schema.yaml](https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.json)
+* JSON version: [schema.json](https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml)
 
 
 # JSON-LD Context
@@ -81,7 +81,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/context.jsonld)
+[context.jsonld](https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/context.jsonld)
 
 ## Sources
 
@@ -91,6 +91,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/dqm-schemas](https://github.com/ogcincubator/dqm-schemas)
+* URL: [https://github.com/ogcsandpit/dqm-schemas](https://github.com/ogcsandpit/dqm-schemas)
 * Path: `_sources/extraneous_nodes`
 

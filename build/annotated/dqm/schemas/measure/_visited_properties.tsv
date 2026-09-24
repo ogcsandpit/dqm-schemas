@@ -1,3 +1,3 @@
-path	@id
-/value	http://www.opengis.net/def/metamodel/isodqm/measureValue
-/units	http://www.opengis.net/def/metamodel/isodqm/units
+path	@id	schema
+/value	http://www.opengis.net/def/metamodel/isodqm/measureValue	/github/workspace/build/annotated/dqm/schemas/measure/schema.yaml
+/units	http://www.opengis.net/def/metamodel/isodqm/units	/github/workspace/build/annotated/dqm/schemas/measure/schema.yaml

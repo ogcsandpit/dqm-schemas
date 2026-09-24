@@ -1,2 +1,2 @@
-path	@id
-/extraneous_nodes	http://www.opengis.net/def/metamodel/isodqm/21
+path	@id	schema
+/extraneous_nodes	http://www.opengis.net/def/metamodel/isodqm/21	/github/workspace/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml

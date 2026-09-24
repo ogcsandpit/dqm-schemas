@@ -47,7 +47,7 @@ Example GeoJSON feature with a DQM property
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld",
+  "@context": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld",
   "id": "f1",
   "type": "Feature",
   "geometry": {
@@ -96,7 +96,7 @@ $defs:
     - properties:
         properties:
           allOf:
-          - $ref: https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml
+          - $ref: https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml
           - required:
             - extraneous_nodes
 $ref: '#/$defs/MyFeature'
@@ -105,8 +105,8 @@ $ref: '#/$defs/MyFeature'
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.yaml)
+* YAML version: [schema.yaml](https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.json)
+* JSON version: [schema.json](https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.yaml)
 
 
 # JSON-LD Context
@@ -114,6 +114,19 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "Feature": "geojson:Feature",
+    "FeatureCollection": "geojson:FeatureCollection",
+    "GeometryCollection": "geojson:GeometryCollection",
+    "LineString": "geojson:LineString",
+    "MultiLineString": "geojson:MultiLineString",
+    "MultiPoint": "geojson:MultiPoint",
+    "MultiPolygon": "geojson:MultiPolygon",
+    "Point": "geojson:Point",
+    "Polygon": "geojson:Polygon",
+    "features": {
+      "@container": "@set",
+      "@id": "geojson:features"
+    },
     "type": "@type",
     "id": "@id",
     "properties": "@nest",
@@ -129,19 +142,6 @@ Links to the schema:
     "bbox": {
       "@container": "@list",
       "@id": "geojson:bbox"
-    },
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "features": {
-      "@container": "@set",
-      "@id": "geojson:features"
     },
     "links": {
       "@context": {
@@ -163,19 +163,19 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "extraneous_nodes": "dqm:21",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
     "dqm": "http://www.opengis.net/def/metamodel/isodqm/",
+    "extraneous_nodes": "dqm:21",
     "@version": 1.1
   }
 }
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld)
+[context.jsonld](https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld)
 
 ## Sources
 
@@ -186,6 +186,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/dqm-schemas](https://github.com/ogcincubator/dqm-schemas)
+* URL: [https://github.com/ogcsandpit/dqm-schemas](https://github.com/ogcsandpit/dqm-schemas)
 * Path: `_sources/eg_usage`
 

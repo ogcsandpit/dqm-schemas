@@ -30,7 +30,7 @@ example using default namespace for UOM
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld",
+  "@context": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld",
   "value": 3,
   "units": "M"
 }
@@ -60,7 +60,7 @@ example using a custom namespace for UOM
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld",
+  "@context": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld",
   "value": 27.2,
   "units": "http://mydomain.org/units/foogles-per-thrunge"
 }
@@ -101,8 +101,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.yaml)
+* YAML version: [schema.yaml](https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.json)
+* JSON version: [schema.json](https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.yaml)
 
 
 # JSON-LD Context
@@ -125,7 +125,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld)
+[context.jsonld](https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld)
 
 ## Sources
 
@@ -135,6 +135,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/dqm-schemas](https://github.com/ogcincubator/dqm-schemas)
+* URL: [https://github.com/ogcsandpit/dqm-schemas](https://github.com/ogcsandpit/dqm-schemas)
 * Path: `_sources/measure`
 

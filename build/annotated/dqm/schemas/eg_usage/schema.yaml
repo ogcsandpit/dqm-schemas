@@ -7,7 +7,7 @@ $defs:
     - properties:
         properties:
           allOf:
-          - $ref: https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml
+          - $ref: https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml
           - required:
             - extraneous_nodes
 $ref: '#/$defs/MyFeature'

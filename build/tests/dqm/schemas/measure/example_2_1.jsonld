@@ -1,5 +1,5 @@
 {
-  "@context": "https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld",
+  "@context": "https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld",
   "value": 27.2,
   "units": "http://mydomain.org/units/foogles-per-thrunge"
 }

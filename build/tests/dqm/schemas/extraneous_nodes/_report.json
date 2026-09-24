@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.dqm.schemas.extraneous_nodes - DQM 21 extraneous nodes",
   "bblockName": "DQM 21 extraneous nodes",
   "bblockId": "ogc.dqm.schemas.extraneous_nodes",
-  "generated": "2024-11-18T05:57:59.284576+00:00",
+  "generated": "2026-09-24T22:52:30.221627+00:00",
   "result": true,
   "items": [
     {
@@ -10,10 +10,10 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/dqm/schemas/extraneous_nodes/example_1_1.json",
-        "url": "https://ogcincubator.github.io/dqm-schemas/build/tests/dqm/schemas/extraneous_nodes/example_1_1.json",
+        "url": "https://ogcsandpit.github.io/dqm-schemas/build/tests/dqm/schemas/extraneous_nodes/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
-        "language": "json"
+        "language": "application/json"
       },
       "result": true,
       "sections": [

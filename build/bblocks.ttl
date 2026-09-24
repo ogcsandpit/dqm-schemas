@@ -1,120 +1,194 @@
 @prefix bblocks: <https://www.opengis.net/def/bblocks/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
 @prefix schema: <https://schema.org/> .
+@prefix shacl: <https://www.w3.org/TR/shacl/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://ogcincubator.github.io/ogc.dqm.schemas.eg_usage> a skos:Concept,
+<bblocks://ogc.dqm.schemas.eg_usage> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "Example Feature with DQM" ;
-    dct:abstract "Example of defining a feature with a specific DQM property" ;
+    dct:abstract "Example of defining a feature with a specific DQM property"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-09-18T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/eg_usage/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/eg_usage/index.md" ],
+            rdfs:isDefinedBy <https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/eg_usage/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/dqm-schemas/bblock/ogc.dqm.schemas.eg_usage" ] ;
+            rdfs:isDefinedBy <https://ogcsandpit.github.io/dqm-schemas/bblock/ogc.dqm.schemas.eg_usage> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/eg_usage/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-11-18"^^xsd:date ;
+    dct:modified "2026-09-21"^^xsd:date ;
     dct:source <http://www.opengis.net/def/metamodel/profiles/geodcat>,
         <https://www.w3.org/TR/prov-o/> ;
-    skos:inScheme <https://ogcincubator.github.io/dqm-schemas/> ;
+    skos:inScheme <https://ogcsandpit.github.io/dqm-schemas/> ;
+    skos:prefLabel "Example Feature with DQM" ;
+    skos:topConceptOf <https://ogcsandpit.github.io/dqm-schemas/> ;
     dcat:keyword "DCAT",
         "Records",
         "STAC",
         "profile" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.dqm.schemas.extraneous_nodes>,
-        <https://ogcincubator.github.io/ogc.geo.features.feature> ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.json>,
-        <https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/eg_usage/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.dqm.schemas.extraneous_nodes>,
+        <bblocks://ogc.geo.features.feature> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://ogcincubator.github.io/ogc.dqm.schemas.measure> a skos:Concept,
+<bblocks://ogc.dqm.schemas.measure> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "Measure" ;
-    dct:abstract "Utility datatype for a Measure, a numerical value with a units of measure. The QUDT namespaces is defined by default, but may be overridden by a well formed URI or CURIE pattern." ;
+    dct:abstract "Utility datatype for a Measure, a numerical value with a units of measure. The QUDT namespaces is defined by default, but may be overridden by a well formed URI or CURIE pattern."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/measure/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/dqm-schemas/bblock/ogc.dqm.schemas.measure" ],
+            rdfs:isDefinedBy <https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/measure/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/measure/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/measure/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcsandpit.github.io/dqm-schemas/bblock/ogc.dqm.schemas.measure> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-11-18"^^xsd:date ;
+    dct:modified "2026-09-21"^^xsd:date ;
     dct:source <https://example.com/sources/1> ;
-    skos:inScheme <https://ogcincubator.github.io/dqm-schemas/> ;
+    skos:inScheme <https://ogcsandpit.github.io/dqm-schemas/> ;
+    skos:prefLabel "Measure" ;
+    skos:topConceptOf <https://ogcsandpit.github.io/dqm-schemas/> ;
     dcat:keyword "templates" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.ogc-utils.iri-or-curie> ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.json>,
-        <https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.yaml> ;
-    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/dqm-schemas/_sources/measure/context.jsonld> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/measure/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.ogc-utils.iri-or-curie> ;
+    bblocks:hasSourceJsonLdContext <https://ogcsandpit.github.io/dqm-schemas/_sources/measure/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
 <http://www.opengis.net/def/metamodel/profiles/geodcat> rdfs:label "GeoDCAT Specification" .
 
-<https://ogcincubator.github.io/ogc.dqm.schemas.extraneous_nodes> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "DQM 21 extraneous nodes" ;
-    dct:abstract "number of faulty point-curve connections in the dataset" ;
-    dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/dqm-schemas/bblock/ogc.dqm.schemas.extraneous_nodes" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/extraneous_nodes/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/extraneous_nodes/index.json" ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2024-11-18"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
-    skos:inScheme <https://ogcincubator.github.io/dqm-schemas/> ;
-    dcat:keyword "templates" ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.json>,
-        <https://ogcincubator.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml> ;
-    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/dqm-schemas/_sources/extraneous_nodes/context.jsonld> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+<https://ogcsandpit.github.io/dqm-schemas/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N1b40cf091377447f89d53bb90722f8a8 ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-09-24T22:52:30.623938"^^xsd:dateTime ;
+            prov:startedAtTime "2026-09-24T22:52:30.457870"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:0ba1fea495e05adbb6f5a9929fd09112c5ada545" ;
+                    rdfs:seeAlso <https://ogcsandpit.github.io/dqm-schemas/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:N1b40cf091377447f89d53bb90722f8a8 ] .
 
 <https://www.w3.org/TR/prov-o/> rdfs:label "PROV-O Specification" .
 
+<bblocks://ogc.dqm.schemas.extraneous_nodes> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "DQM 21 extraneous nodes" ;
+    dct:abstract "number of faulty point-curve connections in the dataset"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/json-full/dqm/schemas/extraneous_nodes/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcsandpit.github.io/dqm-schemas/build/generateddocs/markdown/dqm/schemas/extraneous_nodes/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcsandpit.github.io/dqm-schemas/bblock/ogc.dqm.schemas.extraneous_nodes> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-09-21"^^xsd:date ;
+    dct:source <https://example.com/sources/1> ;
+    skos:inScheme <https://ogcsandpit.github.io/dqm-schemas/> ;
+    skos:prefLabel "DQM 21 extraneous nodes" ;
+    skos:topConceptOf <https://ogcsandpit.github.io/dqm-schemas/> ;
+    dcat:keyword "templates" ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcsandpit.github.io/dqm-schemas/build/annotated/dqm/schemas/extraneous_nodes/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:hasSourceJsonLdContext <https://ogcsandpit.github.io/dqm-schemas/_sources/extraneous_nodes/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
 <https://example.com/sources/1> rdfs:label "Sample source document" .
 
-<https://ogcincubator.github.io/dqm-schemas/> a skos:ConceptScheme,
-        dcat:Catalog ;
+<https://ogcsandpit.github.io/dqm-schemas/> a skos:ConceptScheme,
+        dcat:Catalog,
+        bblocks:BBlocksRegister ;
     rdfs:label "Building Blocks - Data Quality Measures Schemas" ;
     dct:abstract """Implementation models (JSON/YAML schemas, but potentially XML and RDF)
-""" ;
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:description """Data Quality Measures may require complex (non-scalar) value objects, in which case canonical schemas for these values are required to achieve interoperability.
-""" ;
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:modified "2026-09-24T22:52:28.739912"^^xsd:dateTime ;
+    owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
+    skos:hasTopConcept <bblocks://ogc.dqm.schemas.eg_usage>,
+        <bblocks://ogc.dqm.schemas.extraneous_nodes>,
+        <bblocks://ogc.dqm.schemas.measure> ;
     skos:prefLabel "Building Blocks - Data Quality Measures Schemas" ;
-    bblocks:hasValidationReport <https://ogcincubator.github.io/dqm-schemas/build/tests/report.html> ;
-    bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://ogcsandpit.github.io/dqm-schemas/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://ogcsandpit.github.io/dqm-schemas/build/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://ogcsandpit.github.io/dqm-schemas/build/bblocks.jsonld> ] ;
+    foaf:homepage <https://ogcsandpit.github.io/dqm-schemas/> ;
+    bblocks:hasValidationReport <https://ogcsandpit.github.io/dqm-schemas/build/tests/report.html> .
 
-[] a prov:Activity ;
-    prov:endedAtTime "2024-11-18T05:57:59.478147"^^xsd:dateTime ;
-    prov:startedAtTime "2024-11-18T05:57:59.408379"^^xsd:dateTime ;
-    prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:679772eaa9d88ddd09a8a07724328462a203961b" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/dqm-schemas/build/register.json> ] ;
-    prov:wasAssociatedWith [ a prov:Agent,
-                schema:SoftwareApplication ;
-            rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.3.55" ;
-            rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
+_:N1b40cf091377447f89d53bb90722f8a8 a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.5.35.dev2+g67607e7aa" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 
